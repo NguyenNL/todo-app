@@ -1,0 +1,9 @@
+.add-todo{
+  #create-todo{
+    display: flex;
+    flex-direction: row;
+    input{
+      margin-right: 2rem;
+    }
+  }
+}

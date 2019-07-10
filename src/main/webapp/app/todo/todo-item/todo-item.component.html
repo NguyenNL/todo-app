@@ -1,0 +1,17 @@
+<div [ngClass]="setClasses()" class="todo-item">
+
+    <div *ngIf="!isEdit">
+        <p >{{ todo.title }}</p>
+        <p >{{ todo.description }}</p>
+        <p >{{ parseEventTimeTodo(todo.eventTime)}}</p>
+    </div>
+
+    <app-add-todo *ngIf="isEdit" [submitBtnName]="'Edit'" [todo]="todo" (addTodoEvent)="editTodo($event)"></app-add-todo>
+
+    <div class="button-container">
+        <button  class="btn btn-primary" [disabled]="isEdit" (click)="onDelete(todo)">Delete</button>
+        <button *ngIf="!isEdit" class="btn btn-primary" (click)="edit(todo)">Edit</button>
+        <input  type="checkbox" [disabled]="isEdit" [(ngModel)]="isChecked" (change)="onCheckToggle(isChecked ? 'Checked':'None', todo)">
+    </div>
+
+</div>

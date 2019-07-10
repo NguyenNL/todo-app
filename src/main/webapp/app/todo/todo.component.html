@@ -1,0 +1,14 @@
+<div class="todo">
+    <p>Todo list</p>
+    <app-add-todo (addTodoEvent)="addTodo($event)" [submitBtnName]="'Add'"></app-add-todo>
+    <app-todo-item
+            *ngFor="let todo of todos"
+            [todo]="todo"
+            (editEvent)="editTodo($event)"
+            (deleteEvent)="deleteTodo($event)"
+            (checkedEvent)="checkedTodo($event)"
+    >
+    </app-todo-item>
+
+    <button class="btn btn-primary" [disabled]="deleteTodos.length === 0" (click)="deleteMultiTodo()">Delete multiple Todo item.</button>
+</div>

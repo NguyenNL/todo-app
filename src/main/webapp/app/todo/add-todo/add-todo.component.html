@@ -1,0 +1,8 @@
+<div class="add-todo">
+    <form id="create-todo" [formGroup]="addTodoForm" (ngSubmit)="addTodo()">
+        <input class="form-control" id="title" placeholder="title" name="title" formControlName="title">
+        <input  class="form-control" id="description" placeholder="description" name="description" formControlName="description">
+        <input class="form-control" type="datetime-local" placeholder="event date" name="eventDate" formControlName="eventTime">
+        <button type="submit" class="btn btn-primary" [disabled]="!addTodoForm.valid">{{submitBtnName}}</button>
+    </form>
+</div>
