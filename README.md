@@ -39,7 +39,7 @@ auto-refreshes when files change on your hard drive.
     
 After that, Enter url http://localhost:8081/ to access application.
 
-Note: Using H2 Db, you don't need install any database. 
+Note: Using H2 Db, you don't need install any database. Check H2 DB at url http://localhost:8080/h2-console 
 
 ## Build
 
