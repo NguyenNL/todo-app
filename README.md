@@ -43,9 +43,9 @@ Note: Using H2 Db, you don't need install any database.
 
 ## Build
 
-Font-end.
-
     npm run build
+    mvn -Dmaven.test.skip=true package
+    
 After that, you can check at url http://localhost:8080/ with font-end, back-end are same domain.
 
 
