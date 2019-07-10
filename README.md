@@ -16,7 +16,7 @@ e.	Delete multiple Todo item.
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
+ [Node.js][]: We use Node to run a development web server and build the project.
    Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
 After installing Node, you should be able to run the following command to install development tools.
@@ -27,7 +27,7 @@ You will only need to run this command when dependencies change in [package.json
 
 After installing Maven, you should be able to run the following command to install dependence.
 
-    mvn install
+    mvn dependency:resolve
 
 We use npm scripts and [Webpack][] as our build system.
 
@@ -36,6 +36,18 @@ auto-refreshes when files change on your hard drive.
 
     mvn spring-boot:run
     npm start
+    
+After that, Enter url http://localhost:8081/ to access application.
+
+Note: Using H2 Db, you don't need install any database. 
+
+## Build
+
+Font-end.
+
+    npm run build
+After that, you can check at url http://localhost:8080/ with font-end, back-end are same domain.
+
 
 
 
